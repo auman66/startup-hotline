@@ -13,10 +13,11 @@ exports.handler = function (context, event, callback) {
     [
       {
         fields: {
-          Call: event.CallSid,
+          SID: event.CallSid,
+          Type: "Voice",
           Message: event.TranscriptionText,
           Message_URL: event.RecordingUrl,
-          Call_URL: `https://www.twilio.com/console/voice/calls/logs/${event.CallSid}`,
+          Event_URL: `https://www.twilio.com/console/voice/calls/logs/${event.CallSid}`,
         },
       },
     ],
